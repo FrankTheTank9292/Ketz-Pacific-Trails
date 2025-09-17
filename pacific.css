@@ -103,7 +103,7 @@ padding-left: 2em;
 
 #homehero {
 height: 300px;
-        background-image: url("images/coast.jpg");
+        background-image: url("images/fishingboat.jpg");
         background-size: 100% 100%;
         background-repeat: no-repeat;
 }
@@ -111,7 +111,7 @@ height: 300px;
 
 #yurthero {
 height: 300px;
-        background-image: url("images/yurt.jpg");
+        background-image: url("images/coffeepour.jpg");
         background-size: 100% 100%;
         background-repeat: no-repeat;
 }
@@ -119,7 +119,7 @@ height: 300px;
 
 #trailhero {
 height: 300px;
-        background-image: url("images/trail.jpg");
+        background-image: url("images/fall.jpg");
         background-size: 100% 100%;
         background-repeat: no-repeat;
 }
