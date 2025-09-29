@@ -10,40 +10,51 @@
   <div id="wrapper">
     <!-- Header -->
     <header>
-      <h1>Pacific Trails Resort</h1>
+      <h1><a href="index.html">
+        Pacific Trails Resort</a></h1>
     </header>
 
-    <!-- Navigation (bold via CSS, no <b> tag) -->
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="yurts.html">Yurts</a>
-      <a href="activities.html">Activities</a>
-      <a href="reservations.html">Reservations</a>
-    </nav>
-    <div id="yurthero"></div>
+    <div class="content">
+      <!-- Navigation (vertical left column) -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="yurts.html">Yurts</a></li>
+          <li><a href="activities.html">Activities</a></li>
+        </ul>
+      </nav>
 
+      <!-- Main Content -->
+      <main>
+        <div id="yurthero" class="hero" aria-label="Yurts hero image"></div>
 
-    <!-- Main Content -->
-    <main>
-      <h2>Our Yurts</h2>
-      <p>Experience comfort and style in our spacious, handcrafted yurts designed for relaxation.</p>
+        <h2>Our Yurts</h2>
+        <p>Experience comfort and style in our spacious, handcrafted yurts designed for relaxation.</p>
 
-      <dl>
-        <dt>Yurt Features</dt>
-        <dd>King-size bed, gas fireplace, private deck with ocean view.</dd>
+        
+        <section class="qa">
+          <h3>Yurt Features</h3>
+          <p>King-size bed, gas fireplace, private deck with ocean view.</p>
+        </section>
 
-        <dt>Bath Amenities</dt>
-        <dd>Private bath with luxury linens and eco‑friendly toiletries.</dd>
+        <section class="qa">
+          <h3>Bath Amenities</h3>
+          <p>Private bath with luxury linens and eco‑friendly toiletries.</p>
+        </section>
 
-        <dt>Technology</dt>
-        <dd>Complimentary Wi‑Fi and convenient device charging stations.</dd>
+        <section class="qa">
+          <h3>Technology</h3>
+          <p>Complimentary Wi‑Fi and convenient device charging stations.</p>
+        </section>
 
-        <dt class="special">Housekeeping</dt>
-        <dd>Daily refresh service available upon request.</dd>
-      </dl>
-    </main>
+        <section class="qa">
+          <h3 class="special">Housekeeping</h3>
+          <p>Daily refresh service available upon request.</p>
+        </section>
+      </main>
+    </div>
 
-    <!-- Footer (styled via CSS) -->
+    <!-- Footer -->
     <footer>
       Copyright &copy; 2025 Pacific Trails Resort<br>
       <a href="mailto:fketz95@stu.jjc.edu">Frank Ketz</a>
