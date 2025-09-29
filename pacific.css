@@ -1,70 +1,124 @@
-/* Pacific Trails Resort CSS Page */
 
-/* Main styles */
+/* ===== CSS Reset  ===== */
+* { box-sizing: border-box; }
+
+/* ===== Base / Body ===== */
 body {
-background-color: #90C7E3;
-        background-image: linear-gradient(#FFFFFF, #90C7E3);
-        background-repeat: no-repeat;
-        margin: 0;
-        padding: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #90C7E3;
+  background-image: linear-gradient(#FFFFFF, #90C7E3);
+  background-repeat: no-repeat; /* required: body image repeat setting */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #222;
+  line-height: 1.5;
 }
 
-
-/* Centered page layout */
+/* ===== Layout Wrapper ===== */
 #wrapper {
-background-color: #FFFFFF;
-        min-width: 960px;
-        max-width: 2048px;
-        margin-left: auto;
-        margin-right: auto;
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  background-color: #ffffff;
+  min-width: 960px;
+  max-width: 2048px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* header, content, footer */
+  min-height: 100vh;
 }
 
-
-/* Header */
+/* ===== Header ===== */
 header {
-background-image: url("images/sunset.jpg");
-        background-repeat: no-repeat;
-        background-position: right;
-        height: 72px;
+  background-image: url("images/sunset.jpg");
+  background-repeat: no-repeat;  /* required: header image repeat setting */
+  background-position: right;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  padding: 0 .75rem;
 }
 
-
-/* Brush Script requirement */
-h1 {
-text-align: center;
-        padding-top: .5em;
+header h1 {
+  margin: 0 auto; /* center in header */
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-align: center;
 }
 
-
-/* Navigation */
-nav {
-padding: .5em .5em .5em .5em;
-        text-align: center;
-}
-
-nav a {
+header h1 a {
   text-decoration: none;
   color: #002171;
-  margin-right: 1.25rem;
+  transition: text-shadow .2s ease, color .2s ease;
+}
+
+/* Hover effect on H1 anchor */
+header h1 a:hover {
+  text-shadow: 0 1px 6px rgba(0,0,0,.25);
+  color: #0044cc;
+}
+
+/* ===== Two-Column Content Area ===== */
+.content {
+  display: grid;
+  grid-template-columns: 220px 1fr; /* left nav, right main */
+  gap: 0;
+}
+
+/* ===== Vertical Navigation ===== */
+nav {
+  padding: 1rem .75rem;
+  border-right: 1px solid #e6e6e6;
+}
+
+/* Descendant selector group per instructions */
+nav ul, nav li, nav a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul { /* descendant selector */
+  display: block;
+}
+
+nav li { /* descendant selector */
+  margin-bottom: .5rem;
+}
+
+nav a { /* descendant selector */
+  display: block;
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Pseudo classes for nav links */
+nav a:link    { color: #002171; background: transparent; }
+nav a:visited { color: #3d3a96; }
+nav a:hover   { background: rgba(25, 118, 210, .10); color: #0044cc; }
+
+/* ===== Main Area ===== */
+main {
+  padding: 1.25rem 2rem;
+  display: block;
 }
 
 /* Headings */
 h2 {
   color: #1976D2;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Georgia, "Times New Roman", serif;
+  margin-top: .5rem;
 }
 
-/* Definition terms */
-dt {
-  color: #002171;
-  font-weight: bold;
+h3 {
+  font-family: Georgia, serif;
 }
 
 /* Resort class */
 .resort {
   color: #1976D2;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 /* Special class */
@@ -73,54 +127,46 @@ dt {
   color: #660099;
 }
 
-/* Footer */
+/* ===== Hero Images (full width of main) ===== */
+.hero {
+  width: 100%;
+  height: 300px;
+  background-size: cover;         /* maintain aspect / fill area */
+  background-position: center;    /* keep focal point centered */
+  background-repeat: no-repeat;
+  border-radius: .5rem;
+  margin: .75rem 0 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.12);
+}
+
+#homehero  { background-image: url("images/coffeepour.jpg"); }
+#yurthero  { background-image: url("images/fishingboat.jpg"); }
+#trailhero { background-image: url("images/fall.jpg"); }
+
+/* ===== Definition terms (some pages may still use them) ===== */
+dt {
+  color: #002171;
+  font-weight: bold;
+}
+
+/* ===== Footer ===== */
 footer {
-padding: 1em;
-        text-align: center;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+  color: #333;
 }
 
+/* ===== Utilities ===== */
+ul { padding-left: 1.25rem; }
 
-/* Utility spacing */
-main, footer {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+/* ===== Page-Specific Sections ===== */
+section.qa { 
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px dashed #d9e3f2;
 }
 
-ul {
-  padding-left: 1.5rem;
+section.activity { 
+  margin-bottom: 1rem;
 }
-h3 {
-font-family: Georgia, serif;
-}
-
-
-main {
-padding-left: 2em;
-        padding-right: 2em;
-        display: block;
-}
-
-
-#homehero {
-height: 300px;
-        background-image: url("images/fishingboat.jpg");
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-}
-
-
-#yurthero {
-height: 300px;
-        background-image: url("images/coffeepour.jpg");
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-}
-
-
-#trailhero {
-height: 300px;
-        background-image: url("images/fall.jpg");
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-}
-
