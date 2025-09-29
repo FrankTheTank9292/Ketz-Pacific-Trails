@@ -10,31 +10,42 @@
   <div id="wrapper">
     <!-- Header -->
     <header>
-      <h1>Pacific Trails Resort</h1>
+      <h1><a href="index.html">
+        Pacific Trails Resort</a></h1>
     </header>
 
-    <!-- Navigation (bold via CSS, no <b> tag) -->
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="yurts.html">Yurts</a>
-      <a href="activities.html">Activities</a>
-      <a href="reservations.html">Reservations</a>
-    </nav>
-    <div id="trailhero"></div>
+    <div class="content">
+      <!-- Navigation (vertical left column) -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="yurts.html">Yurts</a></li>
+          <li><a href="activities.html">Activities</a></li>
+        </ul>
+      </nav>
 
+      <!-- Main Content -->
+      <main>
+        <div id="trailhero" class="hero" aria-label="Trail hero image"></div>
 
-    <!-- Main Content -->
-    <main><h3>Hiking</h3>
-<p><span class="resort">Pacific Trails Resort</span> has 5 miles of hiking trails and is adjacent to a state park. Go it alone or join one of our guided hikes.</p>
+        <section class="activity">
+          <h3>Hiking</h3>
+          <p><span class="resort">Pacific Trails Resort</span> has 5 miles of hiking trails and is adjacent to a state park. Go it alone or join one of our guided hikes.</p>
+        </section>
 
-<h3>Kayaking</h3>
-<p>Ocean kayaks are available for guest use.</p>
+        <section class="activity">
+          <h3>Kayaking</h3>
+          <p>Ocean kayaks are available for guest use.</p>
+        </section>
 
-<h3>Bird Watching</h3>
-<p>While anytime is a good time for bird watching at Pacific Trails, we offer guided birdwatching trips at sunrise several times a week.</p>
-</main>
+        <section class="activity">
+          <h3>Bird Watching</h3>
+          <p>While anytime is a good time for bird watching at Pacific Trails, we offer guided birdwatching trips at sunrise several times a week.</p>
+        </section>
+      </main>
+    </div>
 
-    <!-- Footer (styled via CSS) -->
+    <!-- Footer -->
     <footer>
       Copyright &copy; 2025 Pacific Trails Resort<br>
       <a href="mailto:fketz95@stu.jjc.edu">Frank Ketz</a>
