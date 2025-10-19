@@ -211,6 +211,29 @@ footer { margin-left: 0; }
 
 
 
+table {
+  margin: 1rem auto;
+  border: 1px solid #3399CC;
+  width: 90%;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 5px;
+  border: 1px solid #3399CC;
+}
+
+td { text-align: center; }
+
+/* Override for description cells */
+.text { text-align: left; }
+
+/* Alternate row background color for readability */
+tr:nth-of-type(even) {
+  background-color: #DFEDF8;
+}
+
+
 @media (min-width: 600px) {
   h1 { font-size: 2em; letter-spacing: .25em; }
   nav ul { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around; padding-right: 2em; }
